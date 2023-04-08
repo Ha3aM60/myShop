@@ -18,8 +18,8 @@
         <table class="table">
             <thead>
             <tr>
-                <th scope="col">Номер</th>
-                <th scope="col">Назва</th>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
                 <th></th>
             </tr>
             </thead>
@@ -28,7 +28,7 @@
             $sql = "SELECT * FROM tbl_categories";
             $command = $dbh->query($sql);
             foreach($command as $row) {
-                $name = $row["name"];
+                $name = $row["nameCategory"];
                 $id = $row["id"];
                 echo "
                 <tr>

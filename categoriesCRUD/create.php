@@ -6,7 +6,7 @@ include($_SERVER["DOCUMENT_ROOT"] . "/connection.php");
 
         $name = $_POST['name'];
         if (!empty($name)) {
-            $stmt = $dbh->prepare("INSERT INTO tbl_categories (id, name) VALUES (NULL, :name)");
+            $stmt = $dbh->prepare("INSERT INTO tbl_categories (id, nameCategory) VALUES (NULL, :name)");
             $stmt->bindParam(':name', $_POST['name']);
             $stmt->execute();
             header("location: /categories.php");
@@ -25,7 +25,7 @@ include($_SERVER["DOCUMENT_ROOT"] . "/connection.php");
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="/css/bootstrap.min.css"><link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
 </head>
 <body>
 <?php include($_SERVER["DOCUMENT_ROOT"] . "/header.php"); ?>

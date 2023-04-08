@@ -59,10 +59,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <?php include($_SERVER["DOCUMENT_ROOT"] . "/connection.php"); ?>
     <main>
         <div class="container">
-            <h1 class="text-center">Додати товар</h1>
+            <h1 class="text-center">Add products</h1>
             <form method="post" class="needs-validation" novalidate>
                 <div class="mb-3">
-                    <label for="name" class="form-label">Назва</label>
+                    <label for="name" class="form-label">Name</label>
                     <input type="text"
                            class="form-control"
                            value=""
@@ -76,7 +76,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <div class="mb-3">
                     <div class="row">
                         <div class="col-md-6">
-                            <label for="category_id" class="form-label">Категорія</label>
+                            <label for="category_id" class="form-label">Category ID</label>
                             <input type="text"
                                    class="form-control"
                                    id="category_id"
@@ -87,7 +87,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         </div>
 
                         <div class="col-md-6">
-                            <label for="category_id" class="form-label">Ціна</label>
+                            <label for="category_id" class="form-label">Price</label>
                             <input type="text"
                                    class="form-control"
                                    id="price"
@@ -130,7 +130,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <div class="invalid-feedback">
                             Вкажіть опис товару
                         </div>
-                        <label for="description">Опис</label>
+                        <label for="description">Description</label>
                     </div>
 
                 </div>

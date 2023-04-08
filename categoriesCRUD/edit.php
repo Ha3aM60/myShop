@@ -9,7 +9,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST") {
             $name = $_POST['name'];
 
         if (!empty($name)) {
-            $sql = "UPDATE `tbl_categories` SET `name` = ? WHERE `tbl_categories`.`id` = ?;";
+            $sql = "UPDATE `tbl_categories` SET `nameCategory` = ? WHERE `tbl_categories`.`id` = ?;";
             $stmt = $dbh->prepare($sql);
             $stmt->execute([$name, $id]);
             header("location: /categories.php");
@@ -53,10 +53,10 @@ if($_SERVER["REQUEST_METHOD"]=="POST") {
                         disabled>
             </div>
             <?php
-                $sql = "select name FROM `tbl_categories` WHERE `tbl_categories`.`id` = $id";
+                $sql = "select nameCategory FROM `tbl_categories` WHERE `tbl_categories`.`id` = $id";
                 $stmt = $dbh->query($sql);
             foreach($stmt as $row) {
-                $name = $row["name"];
+                $name = $row["nameCategory"];
             }
             echo "
                 <div class='mb-3'>
